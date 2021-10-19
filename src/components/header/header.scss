@@ -3,6 +3,15 @@
   height: 60px;
   padding: 0 48px;
   align-items: center;
+  background: -webkit-linear-gradient(
+    90deg,
+    #00a49b,
+    #026773,
+    #092c4e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #00a49b, #026773, #092c4e);
+
+  margin-bottom: 30px;
 }
 
 .create-event-btn {
@@ -20,11 +29,14 @@
   }
 
   &__nav-icon {
+    color: white;
     font-size: 16px;
     margin-left: 20px;
   }
 
   &__displayed-month {
     margin-left: 10px;
+    font-size: 20px;
+    color: white;
   }
 }

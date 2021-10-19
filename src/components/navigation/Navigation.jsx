@@ -4,7 +4,6 @@ import { days } from '../../utils/dateUtils.js';
 
 const Navigation = ({ weekDates }) => (
   <header className="calendar__header">
-    {console.log(weekDates)}
     {weekDates.map(dayDate => (
       <div className="calendar__day-label day-label" key={dayDate}>
         <span className="day-label__day-name">{days[dayDate.getDay()]}</span>
