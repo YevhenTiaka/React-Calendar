@@ -2,7 +2,7 @@
 
 ## [Site link](https://github.com/YevhenTiaka/React-Calendar/)
 
-## [Git Hub Page](https://yevhentiaka.github.io/secondProject/)
+## [Git Hub Page]()
 
 ## Project commands:
 
