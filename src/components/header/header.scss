@@ -3,12 +3,7 @@
   height: 60px;
   padding: 0 48px;
   align-items: center;
-  background: -webkit-linear-gradient(
-    90deg,
-    #00a49b,
-    #026773,
-    #092c4e
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(90deg, #00a49b, #026773, #092c4e);
   background: linear-gradient(90deg, #00a49b, #026773, #092c4e);
 
   margin-bottom: 30px;
@@ -20,12 +15,23 @@
   &__icon {
     margin-right: 8px;
   }
+  &:hover {
+    color: white;
+    background-color: #00a49b;
+    animation: animate_grow 2s infinite;
+  }
 }
 
 .navigation {
   &__today-btn {
     margin-left: 32px;
     padding: 0 16px;
+
+    &:hover {
+      background-color: #00a49b;
+      color: white;
+      animation: animate_grow 2s infinite;
+    }
   }
 
   &__nav-icon {
@@ -38,5 +44,17 @@
     margin-left: 10px;
     font-size: 20px;
     color: white;
+  }
+}
+
+@keyframes animate_grow {
+  0% {
+    transform: scale3d(2, 2, 2);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }

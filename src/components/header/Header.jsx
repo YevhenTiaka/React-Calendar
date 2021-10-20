@@ -1,7 +1,6 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import { months } from '../../utils/dateUtils.js';
-
 import './header.scss';
 
 const dayWeek = 7;
@@ -52,3 +51,9 @@ const Header = ({ weekDates, setWeekStartDate, toggleModal }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  weekDates: PropTypes.array.isRequired,
+  setWeekStartDate: PropTypes.func.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+};

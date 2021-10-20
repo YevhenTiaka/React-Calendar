@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import './modal.scss';
 
 const Modal = ({ handleFormData, handleToggle }) => (
@@ -32,3 +32,8 @@ const Modal = ({ handleFormData, handleToggle }) => (
   </div>
 );
 export default Modal;
+
+Modal.propTypes = {
+  handleFormData: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func.isRequired,
+};

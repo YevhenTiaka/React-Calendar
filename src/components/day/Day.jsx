@@ -1,30 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Hour from '../hour/Hour.jsx';
-
 import './day.scss';
 
-const Day = ({ dataDay, dayEvents, deleteEvents }) => {
+const Day = ({ dataDay, dayEvents, deleteEventsHandler }) => {
   const hours = Array(24)
     .fill()
     .map((val, index) => index);
 
-  return (
-    <div className="calendar__day" data-day={dataDay}>
-      {hours.map(hour => {
-        // getting all events from the day we will render
-        const hourEvents = dayEvents.filter(event => new Date(event.dateFrom).getHours() === hour);
+  return hours.map(hour => {
+    const hourEvents = dayEvents.filter(event => new Date(event.dateFrom).getHours() === hour);
 
-        return (
-          <Hour
-            deleteEvents={deleteEvents}
-            key={dataDay + hour}
-            dataHour={hour}
-            hourEvents={hourEvents}
-          />
-        );
-      })}
-    </div>
-  );
+    return (
+      <Hour
+        deleteEventsHandler={deleteEventsHandler}
+        key={dataDay + hour}
+        dataHour={hour}
+        hourEvents={hourEvents}
+      />
+    );
+  });
 };
 
 export default Day;
+
+Day.propTypes = {
+  dataDay: PropTypes.number.isRequired,
+  dayEvents: PropTypes.array.isRequired,
+  deleteEventsHandler: PropTypes.func.isRequired,
+};

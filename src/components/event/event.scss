@@ -1,7 +1,12 @@
 .event {
   position: absolute;
   width: 80%;
-  background-color: cornflowerblue;
+  height: 72px;
+  line-height: 20px;
+  background: #00a49b;
+  border-radius: 20px;
+  padding: 20px;
+
   z-index: 1;
   border-radius: 8px;
   padding: 8px;
@@ -17,7 +22,8 @@
 
   &:hover {
     font-weight: bold;
-    background-color: red;
+    animation: none;
+    background-color: #026773;
   }
 }
 
@@ -25,8 +31,13 @@
   cursor: pointer;
   border: none;
   height: 40px;
-
+  border-radius: 8px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: -20px;
+  right: -40px;
+
+  &:hover {
+    color: white;
+    background-color: #00a49b;
+  }
 }
