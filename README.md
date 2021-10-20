@@ -7,8 +7,8 @@
 ## Project commands:
 
 - [npm start] "Starting project"
-- [npm build] "Bundling project"
-- [npm lint] "For static code analysis for errors"
+- [npm run build] "Bundling project"
+- [npm run lint] "For static code analysis for errors"
 
 ### The tech stack is:
 
