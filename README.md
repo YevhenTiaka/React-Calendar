@@ -1,8 +1,8 @@
 # React Calendar Project
 
-## [Site link](https://github.com/YevhenTiaka/React-Calendar/)
+## [Git Hub Page](https://github.com/YevhenTiaka/React-Calendar/)
 
-## [Git Hub Page]()
+## [Netlify link](https://wonderful-wing-72c35f.netlify.app/)
 
 ## Project commands:
 
