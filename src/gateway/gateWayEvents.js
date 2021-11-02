@@ -1,4 +1,4 @@
-const baseUrl = 'https://6141977c357db50017b3db7a.mockapi.io/api/v1/tasks';
+const baseUrl = 'https://618103da8bfae60017adfd77.mockapi.io/api/v1/calendar-tasks';
 
 export const fetchEvents = () =>
   fetch(baseUrl).then(response => {
