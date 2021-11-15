@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Day from '../day/Day.jsx';
-import Redline from '../RedLine.jsx';
+import Redline from '../Redline/RedLine';
 import './week.scss';
 
 const Week = ({ weekDates, eventList, deleteEventsHandler }) => (
