@@ -6,7 +6,7 @@
 
 ## Project commands:
 
-- [npm] ("Starting project")
+- [npm]("Starting project")
 - [npm run build] "Bundling project"
 - [npm run lint] "Static code analysis for errors and warnings"
 
