@@ -7,7 +7,7 @@ const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    date: new Date(),
+    date: '',
     dateTo: '',
     dateFrom: '',
   });
@@ -21,6 +21,7 @@ const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
 
   const submitFormData = event => {
     event.preventDefault();
+
     const data = {
       ...formData,
       dateFrom: new Date(`${formData.date} ${formData.dateFrom}`),
