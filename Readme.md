@@ -6,7 +6,7 @@
 
 ## Project commands:
 
-- ![#1589F0][npm start or yarn start] "Starting project"
+- ![#1589F0](npm start or yarn start "Starting project")
 
 - ![#1589F0][npm run build] "Bundling project"
 
