@@ -6,11 +6,11 @@
 
 ## Project commands:
 
-`$npm start "Starting project"`
+`npm start` "Starting project"
 
-`$npm run build "Bundling project"`
+`npm run build` "Bundling project"
 
-`$npm run lint "Static code analysis for errors and warnings"`
+`npm run lint ` "Static code analysis for errors and warnings"
 
 ### The tech stack is:
 
