@@ -4,38 +4,27 @@ import './modal.scss';
 import { fetchNewEvent } from '../../gateway/gateWayEvents';
 
 const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
-  const [inputText, setInputText] = useState('');
-  const [inputDescription, setInputDescription] = useState('');
-  const [inputDate, setInputDate] = useState('');
-  const [inputTimeFrom, setInputTimeFrom] = useState('');
-  const [inputTimeTo, setInputTimeTo] = useState('');
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    date: new Date(),
+    dateTo: '',
+    dateFrom: '',
+  });
 
-  const handleChangeTitle = event => {
-    setInputText(event.target.value);
-  };
-
-  const handleChangeDescription = event => {
-    setInputDescription(event.target.value);
-  };
-  const handleChangeDate = event => {
-    setInputDate(event.target.value);
-  };
-  const handleChangeTimeFrom = event => {
-    setInputTimeFrom(event.target.value);
-  };
-
-  const handleChangeTimeTo = event => {
-    setInputTimeTo(event.target.value);
+  const handleChange = event => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const submitFormData = event => {
     event.preventDefault();
-
     const data = {
-      title: inputText,
-      description: inputDescription,
-      dateFrom: new Date(`${inputDate} ${inputTimeFrom}`),
-      dateTo: new Date(`${inputDate} ${inputTimeTo}`),
+      ...formData,
+      dateFrom: new Date(`${formData.date} ${formData.dateFrom}`),
+      dateTo: new Date(`${formData.date} ${formData.dateTo}`),
     };
     fetchNewEvent(data).then(() => fetchEventsHandler());
     toggleModal(false);
@@ -50,8 +39,8 @@ const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
           </button>
           <form className="event-form" onSubmit={submitFormData}>
             <input
-              onChange={handleChangeTitle}
-              value={inputText}
+              onChange={handleChange}
+              value={formData.title}
               type="text"
               name="title"
               placeholder="Title"
@@ -60,34 +49,34 @@ const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
             />
             <div className="event-form__time">
               <input
-                onChange={handleChangeDate}
-                value={inputDate}
+                onChange={handleChange}
+                value={formData.date}
                 type="date"
                 name="date"
                 className="event-form__field"
                 required
               />
               <input
-                onChange={handleChangeTimeFrom}
-                value={inputTimeFrom}
+                onChange={handleChange}
+                value={formData.dateFrom}
                 type="time"
-                name="startTime"
+                name="dateFrom"
                 className="event-form__field"
                 required
               />
               <span>-</span>
               <input
-                onChange={handleChangeTimeTo}
-                value={inputTimeTo}
+                onChange={handleChange}
+                value={formData.dateTo}
                 type="time"
-                name="endTime"
+                name="dateTo"
                 className="event-form__field"
                 required
               />
             </div>
             <textarea
-              onChange={handleChangeDescription}
-              value={inputDescription}
+              onChange={handleChange}
+              value={formData.description}
               name="description"
               placeholder="Description"
               className="event-form__field"
