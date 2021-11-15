@@ -5,9 +5,9 @@ import { fetchNewEvent } from '../../gateway/gateWayEvents';
 
 const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
   const [inputText, setInputText] = useState('');
-  const [inputDescription, setinputDescription] = useState('');
+  const [inputDescription, setInputDescription] = useState('');
   const [inputDate, setInputDate] = useState('');
-  const [inputTimeFrom, setinputTimeFrom] = useState('');
+  const [inputTimeFrom, setInputTimeFrom] = useState('');
   const [inputTimeTo, setInputTimeTo] = useState('');
 
   const handleChangeTitle = event => {
@@ -15,13 +15,13 @@ const Modal = ({ toggleModal, handleToggle, fetchEventsHandler }) => {
   };
 
   const handleChangeDescription = event => {
-    setinputDescription(event.target.value);
+    setInputDescription(event.target.value);
   };
   const handleChangeDate = event => {
     setInputDate(event.target.value);
   };
   const handleChangeTimeFrom = event => {
-    setinputTimeFrom(event.target.value);
+    setInputTimeFrom(event.target.value);
   };
 
   const handleChangeTimeTo = event => {
