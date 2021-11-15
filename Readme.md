@@ -20,4 +20,4 @@
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [React](https://en.reactjs.org/)
 
-### Author:
+### Author:Tiaka Yevhen
