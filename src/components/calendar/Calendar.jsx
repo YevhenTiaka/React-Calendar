@@ -5,12 +5,7 @@ import Sidebar from '../sidebar/Sidebar.jsx';
 import './calendar.scss';
 import Modal from '../modal/Modal.jsx';
 import Week from '../week/Week.jsx';
-import {
-  fetchEvents,
-  fetchNewEvent,
-  deleteEvents,
-  createObjectForm,
-} from '../../gateway/gateWayEvents.js';
+import { fetchEvents, deleteEvents } from '../../gateway/gateWayEvents.js';
 
 const Calendar = ({ weekDates, isOpenModal, toggleModal }) => {
   const [eventList, setEvents] = useState([]);
