@@ -6,8 +6,8 @@
 
 ## Project commands:
 
-- [npm] "Starting project"
-- [npm] "Bundling project"
+- [npm] ("Starting project")
+- [npm run build] "Bundling project"
 - [npm run lint] "Static code analysis for errors and warnings"
 
 ### The tech stack is:
@@ -20,4 +20,4 @@
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [React](https://en.reactjs.org/)
 
-### Author:Tiaka Yevhen
+### Author: Tiaka Yevhen
