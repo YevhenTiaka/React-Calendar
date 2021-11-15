@@ -9,16 +9,17 @@ const Event = ({ height, marginTop, title, time, deleteEventsHandler, id }) => {
   };
 
   const [deleteEventWindow, toggleDeleteWindow] = useState(false);
+
   const showDeleteWindow = event => {
     event.preventDefault();
-    return deleteEventWindow ? toggleDeleteWindow(false) : toggleDeleteWindow(true);
+    toggleDeleteWindow(!deleteEventWindow);
   };
 
   return (
     <div style={eventStyle} id={id} className="event" onClick={showDeleteWindow}>
       <div className="event__title">{title}</div>
       <div className="event__time">{time}</div>
-      {!deleteEventWindow ? null : (
+      {deleteEventWindow && (
         <button className="delete-event-btn" onClick={() => deleteEventsHandler(id)}>
           Delete <i className="far fa-trash-alt"></i>
         </button>

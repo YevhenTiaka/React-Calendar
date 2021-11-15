@@ -23,12 +23,6 @@ const Calendar = ({ weekDates, isOpenModal, toggleModal }) => {
     fetchEventsHandler();
   }, []);
 
-  const handleFormData = event => {
-    event.preventDefault();
-    fetchNewEvent(createObjectForm()).then(() => fetchEventsHandler());
-    toggleModal(false);
-  };
-
   const deleteEventsHandler = eventId => {
     deleteEvents(eventId).then(() => fetchEventsHandler());
   };
@@ -48,9 +42,13 @@ const Calendar = ({ weekDates, isOpenModal, toggleModal }) => {
             weekDates={weekDates}
             eventList={eventList}
           />
-          {isOpenModal ? (
-            <Modal handleFormData={handleFormData} handleToggle={handleToggle} />
-          ) : null}
+          {isOpenModal && (
+            <Modal
+              fetchEventsHandler={fetchEventsHandler}
+              handleToggle={handleToggle}
+              toggleModal={toggleModal}
+            />
+          )}
         </div>
       </div>
     </section>

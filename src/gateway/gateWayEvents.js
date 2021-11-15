@@ -28,16 +28,3 @@ export const deleteEvents = eventId =>
       throw new Error('Failed to delete task');
     }
   });
-
-export const createObjectForm = () => {
-  const form = document.querySelector('.event-form');
-  const userData = Object.fromEntries(new FormData(form));
-  const { title, description, date, startTime, endTime } = userData;
-
-  return {
-    title,
-    description,
-    dateFrom: new Date(`${date} ${startTime}`),
-    dateTo: new Date(`${date} ${endTime}`),
-  };
-};
