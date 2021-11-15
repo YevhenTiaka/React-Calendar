@@ -6,11 +6,11 @@
 
 ## Project commands:
 
-- [npm start or yarn start] "Starting project"
+- ![#1589F0][npm start or yarn start] "Starting project"
 
-- [npm run build] "Bundling project"
+- ![#1589F0][npm run build] "Bundling project"
 
-[npm run lint] "Static code analysis for errors and warnings"
+- ![#1589F0][npm run lint] "Static code analysis for errors and warnings"
 
 ### The tech stack is:
 
